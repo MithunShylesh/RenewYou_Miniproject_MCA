@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Renew You <template></template></title>
+  
+ 
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static  'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Medicio
+  * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="d-none d-md-flex align-items-center">
+          <i class="bi bi-clock me-1"></i> Allways Welcome
+        </div>
+        <div class="d-flex align-items-center">
+          <i class="bi bi-phone me-1"></i> 7306195807
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-end">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img src="{% static 'assets/img/logo.png' %}" alt="">
+          <!-- Uncomment the line below if you also wish to use a text logo -->
+          <!-- <h1 class="sitename">Medicio</h1>  -->
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="{% url 'home' %}#hero" class="active">Home</a></li>
+            <li><a href="{% url 'home' %}#about">About</a></li>
+            <li><a href="{% url 'home' %}#services">Services</a></li>
+            <li><a href="{% url 'healthcare_tips' %}">Healthcare Tips</a></li>
+            <li class="dropdown"><a href="#"><span>Registration/login</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="{% url 'registration' %}">Registration</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+              </ul>
+            </li>
+           
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn" href="{% url 'home' %}#contact">Make an Appointment</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+  
+
+
+   
+    
+
+    <!-- Services Section -->
+    <section id="Nutrition_tips" class="Nutrition section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Nutrition Tips</h2>
+        <p>Essential Nutrition Tips for a Healthy Lifestyle</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="fas fa-egg"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Balanced Diet</h3>
+              </a>
+              <p>A balanced diet provides the right proportion of carbohydrates, proteins, fats, vitamins, and minerals needed for the body to function properly. It helps maintain energy levels, supports immunity, and prevents nutritional deficiencies.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-water"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Stay Hydrated</h3>
+              </a>
+              <p>Drinking enough water throughout the day helps regulate body temperature, improves digestion, supports nutrient absorption, and removes toxins from the body. Proper hydration is essential for overall health and focus.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-apple-alt"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Eat More Fruits and Vegetables</h3>
+              </a>
+              <p>Fruits and vegetables are rich in vitamins, minerals, antioxidants, and dietary fiber. Regular consumption helps boost immunity, improves digestion, and reduces the risk of chronic diseases.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-pizza-slice"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Limit Processed and Junk Foods</h3>
+              </a>
+              <p>Processed and junk foods often contain high amounts of sugar, salt, and unhealthy fats. Reducing their intake helps prevent obesity, heart disease, and digestive problems while promoting better long-term health.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-hourglass-half"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Maintain Proper Meal Timing</h3>
+              </a>
+              <p>Eating meals at regular intervals helps regulate metabolism, maintain stable blood sugar levels, and prevent overeating. Proper meal timing improves digestion and energy management throughout the day.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-atom"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Include Protein in Every Meal</h3>
+              </a>
+              <p>Protein is essential for muscle repair, growth, and overall body strength. Including protein sources such as eggs, pulses, dairy, nuts, or lean meats in every meal helps keep you full and supports healthy body function.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+   
+   
+
+    <!-- Testimonials Section -->
+    <section id="healthcare_tips" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Workout Tips</h2>
+        <p>Essential Workout Tips for a Fit and Active Lifestyle</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper" data-speed="600" data-delay="5000" data-breakpoints="{ &quot;320&quot;: { &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 40 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 40 } }">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" "="">
+            <p>
+              <i class=" bi bi-quote quote-icon-left"></i>
+                <span>Starting workouts with proper warm-up exercises helped reduce muscle stiffness and improved overall flexibility. Regular warm-ups made exercising safer and more comfortable, especially after long working hours</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                <h3>Rohit Sharma</h3>
+                <h4>Software Engineer</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Focusing on correct posture and proper exercise form made workouts more effective and reduced body pain. Learning the right technique increased confidence and motivation to continue exercising regularly.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                <h3>Ananya Patel</h3>
+                <h4>College Student & Fitness Beginner</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Beginning workouts slowly and gradually increasing intensity helped avoid fatigue and injuries. This approach made exercise enjoyable and sustainable even with a busy daily schedule.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                <h3>Vikram Rao</h3>
+                <h4>Marketing Executive</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Combining strength training with cardiovascular exercises significantly improved stamina, muscle strength, and overall fitness. A balanced workout routine made long-term fitness goals easier to achieve.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                <h3>Arjun Verma</h3>
+                <h4>Fitness Enthusiast</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Taking proper rest days allowed muscles to recover and prevented burnout. Adequate recovery improved workout performance and helped maintain long-term physical health.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                <h3>Neha Kulkarni</h3>
+                <h4>Healthcare Assistant</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+   
+
+    
+
+    
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions on Nutrition and Workouts</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item">
+                <h3>Why is nutrition important for an effective workout routine?</h3>
+                <div class="faq-content">
+                  <p>Nutrition provides the energy required for workouts and supports muscle recovery after exercise. A well-balanced diet helps improve performance, reduce fatigue, and promote overall fitness progress.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What should I eat before and after a workout?</h3>
+                <div class="faq-content">
+                  <p>Before a workout, light meals containing carbohydrates and protein help boost energy levels. After a workout, protein-rich foods and healthy carbohydrates support muscle recovery and replenish energy stores.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How often should I work out to stay healthy?</h3>
+                <div class="faq-content">
+                  <p>For general fitness, working out at least 3–5 times per week is recommended. Consistent exercise improves strength, endurance, and overall physical health when combined with proper nutrition.</p>
+              </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Is it necessary to follow a strict diet along with workouts?</h3>
+                <div class="faq-content">
+                  <p>No. A healthy and balanced diet is more important than strict dieting. Sustainable eating habits that include a variety of nutrients support long-term fitness and overall well-being.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Can beginners safely start workouts without prior experience?</h3>
+                <div class="faq-content">
+                  <p>Yes. Beginners can safely start with low-intensity exercises and gradually increase difficulty. Proper guidance, warm-ups, and nutrition help reduce injury risks and improve confidence.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How does hydration affect workout performance?</h3>
+                <div class="faq-content">
+                  <p>Proper hydration helps regulate body temperature, maintain energy levels, and prevent muscle cramps during workouts. Drinking enough water before, during, and after exercise supports better performance and recovery.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+   
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js'%}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
+
+</body>
+
+</html>

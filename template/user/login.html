@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Renew You <template></template></title>
+  
+ 
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static  'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Medicio
+  * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="d-none d-md-flex align-items-center">
+          <i class="bi bi-clock me-1"></i> Allways Welcome
+        </div>
+        <div class="d-flex align-items-center">
+          <i class="bi bi-phone me-1"></i> 7306195807
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-end">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img src="{% static 'assets/img/logo.png' %}" alt="">
+          <!-- Uncomment the line below if you also wish to use a text logo -->
+          <!-- <h1 class="sitename">Medicio</h1>  -->
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="{% url 'home' %}#hero" class="active">Home</a></li>
+            <li><a href="{% url 'home' %}#about">About</a></li>
+            <li><a href="{% url 'home' %}#services">Services</a></li>
+            <li><a href="{% url 'healthcare_tips' %}">Healthcare Tips</a></li>
+            <li class="dropdown"><a href="#"><span>Registration/login</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="{% url 'registration' %}">Registration</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+              </ul>
+            </li>
+          
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn" href="{% url 'home' %}#contact">Make an Appointment</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+    
+        <!-- login Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Login</h6>
+                    <h1 class="mb-5">Log in to our<span class="text-primary text-uppercase">Renewyou</span></h1>
+                </div>
+                <div class="row g-5">
+                     <div class="row g-5">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{% static 'assets/img/all in one_newzize.jpg' %}" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{% static 'assets/img/jung food_newsize.jpg' %}">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{% static 'assets/img/drinking water_newsize.jpg' %}">
+                            </div>
+                            
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{% static 'assets/img/workouts_newsize.jpg' %}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                              <form action="" method="POST">
+                                  {% csrf_token %}
+                                <div class="row g-3">
+                                    {% if error %}
+                                    <div class="col-12">
+                                    <div class="alert alert-danger text-center">
+                                    {{ error }}
+                                    </div>
+                                    </div>
+                                    {% endif %}
+                                    {% if success %}
+                                    <div class="alert alert-success text-center">
+                                    ✅ {{ success }}
+                                    </div>
+                                    {% endif %}
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="username" placeholder="username">
+                                            <label for="text">username</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control" name="password" id="password" placeholder="password">
+                                            <label for="password">password</label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary w-100 py-3" >Login</button>
+                                     <div>
+                                     <a href="{% url 'forgot_password' %}">Forgot password?</a>
+                                     </div>
+
+
+
+
+
+
+
+                                </div>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- login End -->
+  
+
+
+   
+    
+
+   
+
+  </main>
+
+  
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js'%}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
+
+</body>
+
+</html>

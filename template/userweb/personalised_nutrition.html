@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'assets/css/userprofile-blue.css' %}">
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Renew You <template></template></title>
+  
+ 
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static  'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Medicio
+  * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="d-none d-md-flex align-items-center">
+          <i class="bi bi-clock me-1"></i> Allways Welcome
+        </div>
+        <div class="d-flex align-items-center">
+          <i class="bi bi-phone me-1"></i> 7306195807
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-end">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img src="{% static 'assets/img/logo.png' %}" alt="">
+          <!-- Uncomment the line below if you also wish to use a text logo -->
+          <!-- <h1 class="sitename">Medicio</h1>  -->
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="{% url 'userprofile' %}" >userprofile</a></li>
+            <li><a href="{% url 'personalised_nutrition' %}"class="active">Personalized Nutrition</a></li>
+            <li><a href="{% url 'food_recommendation' %}">Food Recommendations</a></li>
+            <li><a href="{% url 'tracking_dashboard' %}">Tracking</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+          
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+         <a class="cta-btn" href="{% url 'logout' %}">Logout</a>
+
+      </div>
+
+    </div>
+    </div>
+
+  </header>
+
+<main class="main">
+    <!-- Hero Section -->
+<section id="hero" class="hero section">
+
+  <div id="hero-carousel"
+       class="carousel slide carousel-fade"
+       data-bs-ride="carousel"
+       data-bs-interval="false">
+
+    <div class="carousel-item active">
+
+      <!-- Background image MUST be here -->
+      <img src="{% static 'assets/img/personalisednutrition.jpg' %}" alt="">
+
+      <!-- Transparent content box -->
+      <div class="container">
+        <h2>Welcome to your personalized Nutrition Plan</h2>
+        <p>This personalized nutrition plan is generated using AI-driven logic based on your health data and lifestyle preferences. By analyzing your profile details, the system delivers customized meal suggestions and nutritional guidance aligned with your health goals.</p>
+      </div>
+
+    </div>
+    </div> <!-- End hero-carousel -->
+</section> <!-- End Hero Section -->
+<section class="section">
+  <div class="container">
+
+    <h2>Have a check on your plan</h2>
+
+    {% if not profile_complete %}
+     <p style="color:red;">
+         ⚠ Complete user profile to gain nutrition plan
+     </p>
+        <a href="{% url 'userprofile' %}">Complete Profile</a>
+
+    {% else %}
+    {% endif %}
+
+    <h3>📊 Health Overview</h3>
+    <p>{{ plan.health_overview }}</p>
+
+    <p><strong>BMI:</strong> {{ plan.bmi }} ({{ plan.bmi_status }})</p>
+    <p>{{ plan.bmi_advice }}</p>
+
+    <p><strong>Calories Explained:</strong> {{ plan.calorie_explanation }}</p>
+
+    <hr>
+    <h4>🔥 Calorie Requirement Analysis</h4>
+
+    <p>
+         Based on your body weight and activity level, your estimated daily calorie
+        requirement is <strong>{{ plan.current_calories }} kcal/day</strong>.
+    </p>
+
+    {% if plan.calorie_action == "increase" %}
+    <p style="color: green;">
+        To achieve your goal, you should increase your intake to approximately
+    <strong>{{ plan.target_calories }} kcal/day</strong>.
+     </p>
+    {% elif plan.calorie_action == "reduce" %}
+    <p style="color: red;">
+        To achieve your goal, you should reduce your intake to approximately
+    <strong>{{ plan.target_calories }} kcal/day</strong>.
+    </p>
+    {% else %}
+    <p style="color: blue;">
+        You should maintain your current intake of
+    <strong>{{ plan.target_calories }} kcal/day</strong>.
+     </p>
+    {% endif %}
+
+    <p>{{ plan.calorie_advice }}</p>
+
+
+    <h3>🍽 Weekly Meal Plan</h3>
+    {% for day, meals in plan.weekly_meals.items %}
+    <h5>{{ day }}</h5>
+    <ul>
+        <li><strong>Breakfast:</strong> {{ meals.breakfast }}</li>
+        <li><strong>Lunch:</strong> {{ meals.lunch }}</li>
+        <li><strong>Dinner:</strong> {{ meals.dinner }}</li>
+    </ul>
+    {% endfor %}
+
+    <hr>
+
+    <h3>🏃 Weekly Exercise Routine</h3>
+    <ul>
+    {% for day, ex in plan.weekly_exercise.items %}
+    <li><strong>{{ day }}:</strong> {{ ex }}</li>
+    {% endfor %}
+    </ul>
+    <p><em>Rest days are essential for muscle recovery and injury prevention.</em></p>
+
+    <hr>
+
+    <h3>🧘 Stress Relief & Relaxation (Weekly)</h3>
+    <ul>
+    {% for day, activity in plan.stress_plan.items %}
+         <li><strong>{{ day }}:</strong> {{ activity }}</li>
+    {% endfor %}
+    </ul>
+
+    <hr>
+
+  <h3>🧠 Mental Well-Being Routine</h3>
+
+  <p>
+  This mental well-being plan is personalized based on your stress levels,
+  activity pattern, and daily lifestyle.
+  </p>
+
+  <h5>🌱 Practicing Gratitude</h5>
+  <p>
+  {{ plan.gratitude_text }}
+  </p>
+
+  <h5>🌬 Mindful Breathing</h5>
+  <p>
+  {{ plan.breathing_text }}
+  </p>
+
+  <p>
+  <b>How to practice mindful breathing:</b><br>
+  Sit comfortably, inhale through your nose for 4 seconds, hold briefly,
+  and exhale slowly through your mouth for 6 seconds.
+  Repeat for 5–10 minutes.
+  </p>
+
+  <h5>👥 Social Connection Guidance</h5>
+  <p>
+  {{ plan.social_text }}
+  </p>
+
+  <h5>📘 Daily Mental Habits</h5>
+  <p>
+  {{ plan.mental_habits_text }}
+  </p>
+
+
+    
+</main>
+ <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js'%}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
+
+</body>
+
+</html>
